@@ -4,9 +4,9 @@
 
 .top {
     background-image: url("./src/img/beachshowcase.jpg");
-    width: 100vw;
     height: 100vh;
-    object-fit: cover;
+    background-position: center;
+    background-size: cover;
 }
 
 h1 {
@@ -27,13 +27,13 @@ h1 {
 }
 
 button {
-    display:inline-block;
+    display:block;
     width: 125px;
     height: 50px;
     border-radius: 10px;
     border: 1px solid #926239; 
     background-color: inherit;
-    margin: 1.5% 46%;
+    margin: 30px auto 0;
    
 }
 
@@ -41,6 +41,11 @@ a {
     text-decoration: none;
     font-size: 16px;
     color:#926239;
+}
+
+.column {
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .brownw {
@@ -60,7 +65,23 @@ a {
 
 .bottom {
     display: inline-block;
-    width: 30vw;
+    width: 31%;
     padding: 20px;
     margin: 0;
+}
+
+/* For mobile */
+
+@media screen and (max-width:576px) {
+    
+    .column {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bottom {
+        width: 100vw;
+        text-align: center;
+    }  
+    
 }
